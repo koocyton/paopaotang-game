@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泡泡堂 Online</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="title">泡泡堂 Online</h1>
+        <canvas id="game-canvas"></canvas>
+        <div id="controls">
+            <span>🎮 方向键/WASD 移动</span>
+            <span>💣 空格 放泡泡</span>
+        </div>
+    </div>
+    <script type="module">
+        import init from '/pkg/client.js';
+        async function run() {
+            await init('/pkg/client_bg.wasm');
+        }
+        run().catch(console.error);
+    </script>
+</body>
+</html>
